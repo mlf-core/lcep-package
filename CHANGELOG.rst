@@ -10,6 +10,10 @@ This project adheres to `Semantic Versioning <https://semver.org/>`_.
 
 **Added**
 
+* Parsing of an appropriate data input file
+* Loading an already trained model and performing predictions
+* Writing the predictions to an output file
+
 **Fixed**
 
 **Dependencies**

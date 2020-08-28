@@ -2,12 +2,12 @@
 lcep-package
 ============
 
-.. image:: https://github.com/zethson/lcep-package/workflows/Build%20lcep-package%20Package/badge.svg
-        :target: https://github.com/zethson/lcep-package/workflows/Build%20lcep-package%20Package/badge.svg
+.. image:: https://github.com/mlf-core/lcep-package/workflows/Build%20lcep-package%20Package/badge.svg
+        :target: https://github.com/mlf-core/lcep-package/workflows/Build%20lcep-package%20Package/badge.svg
         :alt: Github Workflow Build lcep-package Status
 
-.. image:: https://github.com/zethson/lcep-package/workflows/Run%20lcep-package%20Tox%20Test%20Suite/badge.svg
-        :target: https://github.com/zethson/lcep-package/workflows/Run%20lcep-package%20Tox%20Test%20Suite/badge.svg
+.. image:: https://github.com/mlf-core/lcep-package/workflows/Run%20lcep-package%20Tox%20Test%20Suite/badge.svg
+        :target: https://github.com/mlf-core/lcep-package/workflows/Run%20lcep-package%20Tox%20Test%20Suite/badge.svg
         :alt: Github Workflow Tests Status
 
 .. image:: https://img.shields.io/pypi/v/lcep-package.svg

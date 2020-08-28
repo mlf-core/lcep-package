@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/zethson/lcep-package
+    $ git clone git://github.com/mlf-core/lcep-package
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/zethson/lcep-package/tarball/master
+    $ curl -OJL https://github.com/mlf-core/lcep-package/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ make install
 
 
-.. _Github repo: https://github.com/zethson/lcep-package
-.. _tarball: https://github.com/zethson/lcep-package/tarball/master
+.. _Github repo: https://github.com/mlf-core/lcep-package
+.. _tarball: https://github.com/mlf-core/lcep-package/tarball/master

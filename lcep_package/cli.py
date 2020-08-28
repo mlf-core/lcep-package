@@ -13,8 +13,10 @@ WD = os.path.dirname(__file__)
 
 
 @click.command()
-@click.option('-i', '--input', type=str, help='Path to data file to predict.')
-def main(input: str):
+@click.option('-i', '--input', required=True, type=str, help='Path to data file to predict.')
+@click.option('-m', '--model', type=str, help='Path to an already trained XGBoost model. If not passed a default model will be loaded.')
+@click.option('-o', '--output', type=str, help='Path to write the output to')
+def main(input: str, model: str, output: str):
     """Console script for lcep-package."""
     print(r"""[bold blue]
     ██       ██████ ███████ ██████ 
@@ -26,11 +28,18 @@ def main(input: str):
         """)
 
     print('[bold blue]Run [green]cookietemple --help [blue]for an overview of all commands\n')
-
-    model = get_xgboost_model(f'{WD}/models/model_28.08.2020_v1.xgb')
+    if not model:
+        model = get_xgboost_model(f'{WD}/models/model_28.08.2020_v1.xgb')
+    else:
+        model = get_xgboost_model(model)
+    print('[bold blue] Parsing data')
     data_to_predict = read_data_to_predict(input)
+    print('[bold blue] Performing predictions')
     predictions = np.round(model.predict(data_to_predict.DM))
     print(predictions)
+    if output:
+        print(f'[bold blue]Writing predictions to {output}')
+        write_results(predictions, output)
 
 
 @dataclass
@@ -45,6 +54,7 @@ class Dataset:
 def read_data_to_predict(path_to_data_to_predict: str) -> Dataset:
     """
     Parses the data to predict and returns a full Dataset include the DMatrix
+    :param path_to_data_to_predict: Path to the data on which predictions should be performed on
     """
     X = []
     y = []
@@ -67,6 +77,15 @@ def read_data_to_predict(path_to_data_to_predict: str) -> Dataset:
     DM = xgb.DMatrix(X_np, label=y)
 
     return Dataset(X_np, y, DM, gene_names, sample_names)
+
+
+def write_results(predictions: np.ndarray, path_to_write_to) -> None:
+    """
+    Writes the predictions into a human readable file.
+    :param predictions: Predictions as a numpy array
+    :param path_to_write_to: Path to write the predictions to
+    """
+    np.savetxt(path_to_write_to, predictions, delimiter=',')
 
 
 def get_xgboost_model(path_to_xgboost_model: str):
