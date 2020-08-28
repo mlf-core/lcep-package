@@ -27,7 +27,7 @@ def main(input: str, model: str, output: str):
                                
         """)
 
-    print('[bold blue]Run [green]cookietemple --help [blue]for an overview of all commands\n')
+    print('[bold blue]Run [green]lcep-package --help [blue]for an overview of all commands\n')
     if not model:
         model = get_xgboost_model(f'{WD}/models/model_28.08.2020_v1.xgb')
     else:
