@@ -13,7 +13,7 @@ full_name: Lukas Heumos
 email: lukas.heumos@posteo.net
 project_name: lcep-package
 project_short_description: Python package for lcep.
-version: 1.0.0
+version: 1.1.0
 license: MIT
 command_line_interface: Click
 testing_library: pytest
