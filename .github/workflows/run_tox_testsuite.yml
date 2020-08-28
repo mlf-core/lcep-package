@@ -1,4 +1,4 @@
-name: Run lcep Tox Test Suite
+name: Run lcep-package Tox Test Suite
 
 on: [push]
 
