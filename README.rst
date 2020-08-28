@@ -11,8 +11,8 @@ lcep-package
         :alt: Github Workflow Tests Status
 
 .. image:: https://img.shields.io/pypi/v/lcep-package.svg
-        :target: https://img.shields.io/pypi/v/lcep-package.svg
         :target: https://pypi.python.org/pypi/lcep-package
+        :alt: PyPI Status
 
 
 .. image:: https://readthedocs.org/projects/lcep-package/badge/?version=latest
@@ -39,8 +39,7 @@ Features
 Credits
 -------
 
-This package was created with cookietemple_ based on a modified audreyr/cookiecutter-pypackage_ project template using Cookiecutter_.
+This package was created with cookietemple_ using Cookiecutter_.
 
 .. _cookietemple: https://cookietemple.com
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _audreyr/cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
