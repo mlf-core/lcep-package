@@ -1,0 +1,4 @@
+rich==6.0.0
+click==7.1.2
+xgboost==1.2.0
+numpy==1.19.1
