@@ -5,7 +5,7 @@ project_slug: lcep-package
 project_slug_no_hyphen: lcep_package
 template_version: '1.0.0 # <<COOKIETEMPLE_NO_BUMP>>'
 template_handle: cli-python
-github_username: zethson
+github_username: mlf-core
 is_github_repo: false
 is_repo_private: false
 is_github_orga: false
@@ -13,7 +13,7 @@ full_name: Lukas Heumos
 email: lukas.heumos@posteo.net
 project_name: lcep-package
 project_short_description: Python package for lcep.
-version: 0.1.0
+version: 1.0.0
 license: MIT
 command_line_interface: Click
 testing_library: pytest
