@@ -15,8 +15,9 @@ WD = os.path.dirname(__file__)
 @click.command()
 @click.option('-i', '--input', required=True, type=str, help='Path to data file to predict.')
 @click.option('-m', '--model', type=str, help='Path to an already trained XGBoost model. If not passed a default model will be loaded.')
+@click.option('-c/-nc', '--cuda/--no-cuda', type=bool, default=False, help='Whether to enable cuda or not')
 @click.option('-o', '--output', type=str, help='Path to write the output to')
-def main(input: str, model: str, output: str):
+def main(input: str, model: str, cuda: bool, output: str):
     """Console script for lcep-package."""
     print(r"""[bold blue]
     ██       ██████ ███████ ██████ 
@@ -32,6 +33,8 @@ def main(input: str, model: str, output: str):
         model = get_xgboost_model(f'{WD}/models/model_28.08.2020_v1.xgb')
     else:
         model = get_xgboost_model(model)
+    if cuda:
+        model.set_param({'predictor': 'gpu_predictor'})
     print('[bold blue] Parsing data')
     data_to_predict = read_data_to_predict(input)
     print('[bold blue] Performing predictions')

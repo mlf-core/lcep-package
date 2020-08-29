@@ -4,6 +4,19 @@ Changelog
 
 This project adheres to `Semantic Versioning <https://semver.org/>`_.
 
+1.2.0 (2020-08-28)
+------------------
+
+**Added**
+
+* Added flag --cuda and --no-cuda to enable and disable GPU prediction
+
+**Fixed**
+
+**Dependencies**
+
+**Deprecated**
+
 
 1.1.0 (2020-08-28)
 ------------------
