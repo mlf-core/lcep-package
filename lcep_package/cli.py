@@ -30,7 +30,7 @@ def main(input: str, model: str, cuda: bool, output: str):
 
     print('[bold blue]Run [green]lcep-package --help [blue]for an overview of all commands\n')
     if not model:
-        model = get_xgboost_model(f'{WD}/models/model_28.08.2020_v1.xgb')
+        model = get_xgboost_model(f'{WD}/models/model_08.04.2021_v2.xgb')
     else:
         model = get_xgboost_model(model)
     if cuda:
