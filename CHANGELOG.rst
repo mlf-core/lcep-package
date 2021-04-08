@@ -4,6 +4,21 @@ Changelog
 
 This project adheres to `Semantic Versioning <https://semver.org/>`_.
 
+2.0.0 (2021-04-08)
+------------------
+
+**Added**
+
+* Added model (v2) trained on recount2 TCGA/GTEx liver(cancer) data obtained from mlf-core/lcep
+* Replaced test data
+
+**Fixed**
+
+**Dependencies**
+
+**Deprecated**
+
+
 1.2.0 (2020-08-28)
 ------------------
 
