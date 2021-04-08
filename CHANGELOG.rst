@@ -9,6 +9,9 @@ This project adheres to `Semantic Versioning <https://semver.org/>`_.
 
 **Added**
 
+* Added model (v2) trained on recount2 TCGA/GTEx liver(cancer) data obtained from mlf-core/lcep
+* Replaced test data
+
 **Fixed**
 
 **Dependencies**
